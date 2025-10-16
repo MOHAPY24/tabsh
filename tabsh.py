@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from translations import commands
 import subprocess
 import utils
