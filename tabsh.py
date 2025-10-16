@@ -15,7 +15,7 @@ with open(".tabshrc", 'r') as f:
         else:
             os.system(cmd)
     global curr_dir
-    curr_dir = os.getcwd()
+    curr_dir = os.path.expanduser("~")
 
 while True:
     cmd = input(f"{curr_dir} $$ ").strip()
