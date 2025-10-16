@@ -43,7 +43,6 @@ while True:
             print(f"cd: permission denied: {path}")
     else:
         try:
-            # Use subprocess with shell=True to allow chaining, redirection, etc.
             subprocess.run(translated_cmd, shell=True)
         except Exception as e:
             print(e)
