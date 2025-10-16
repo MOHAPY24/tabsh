@@ -22,8 +22,9 @@ while True:
     cmd = input(f"{curr_dir} $$ ").strip()
     if not cmd:
         continue
-    if cmd == "خروج":  # exit
+    if cmd == "خروج" or cmd == "quit" or cmd == "exit":  # exit
         break
+
 
     # Translate command keywords
     translated_cmd = utils.replace_all_keywords(cmd, commands)
