@@ -19,7 +19,10 @@ with open(".tabshrc", 'r') as f:
     os.chdir(curr_dir)
 
 while True:
-    cmd = input(f"{curr_dir} $$ ").strip()
+    try:
+        cmd = input(f"{curr_dir} $$ ").strip()
+    except KeyboardInterrupt:
+        break
     if not cmd:
         continue
     if cmd == "خروج" or cmd == "quit" or cmd == "exit":  # exit
