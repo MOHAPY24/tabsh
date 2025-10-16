@@ -6,8 +6,10 @@ import os
 
 with open(".tabshrc", 'r') as f:
     code = f.read()
-    for cmd in code.splitlines():
-        if cmd.split()[0] in commands:
+    for cmd in code.strip().splitlines():
+        if cmd in "\n\t ":
+            continue
+        elif cmd.split()[0] in commands:
             base = utils.replace_all_keywords(cmd, commands)
             os.system(f"{base}")
         else:
