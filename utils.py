@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import re
 
-def replace_all_keywords(code, replacements):
+def replace_all_keywords(code, replacements): # Use regex parsing to replace arabic syntax back to normal syntax
     string_re = r'(\"\"\".*?\"\"\"|\'\'\'.*?\'\'\'|\".*?(?<!\\)\"|\'.*?(?<!\\)\')'
     parts = re.split(string_re, code, flags=re.DOTALL)
 

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+# ____IMPORTS______
 from translations import commands
 import subprocess
 import utils
@@ -7,91 +8,48 @@ import os
 from prompt_toolkit import PromptSession
 from prompt_toolkit.history import FileHistory
 import sys
+from handle_scripts import script_handler
+from rc_handler import handle_rc
 
+# For directory tracking
 global curr_dir
 curr_dir = ""
 
-try:
-    script = sys.argv[1]
-    with open(script, 'r') as f:
-        scode = f.read().strip()
-        for cmd in scode.splitlines():
-            if not cmd:
-                continue
-            if cmd == "خروج" or cmd == "quit" or cmd == "exit":  # exit
-                break
+# handle_scripts.py
+script_handler(curr_dir, sys.argv)
 
-
-            # Translate command keywords
-            translated_cmd = utils.replace_all_keywords(cmd, commands)
-            base = translated_cmd.split()[0]
-
-            if base == "cd":
-                parts = translated_cmd.split(maxsplit=1)
-                path = parts[1] if len(parts) > 1 else os.path.expanduser("~")
-
-                try:
-                    os.chdir(os.path.expanduser(path))
-                    curr_dir = os.getcwd()
-                except FileNotFoundError:
-                    print(f"cd: no such file or directory: {path}")
-                except NotADirectoryError:
-                    print(f"cd: not a directory: {path}")
-                except PermissionError:
-                    print(f"cd: permission denied: {path}")
-            else:
-                try:
-                    subprocess.run(translated_cmd, shell=True)
-                except Exception as e:
-                    print(e)
-    quit()
-
-except IndexError:
-    pass
-
-
+# command history and cycling
 history = FileHistory('.tabshhistory')
 session = PromptSession(history=history)
 
+# to be written to .tabshhistory
 command_history = []
 
 r = open(".tabshhistory", 'a')
 
-with open(".tabshrc", 'r') as f:
-    code = f.read()
-    for cmd in code.strip().splitlines():
-        if cmd in "\n\t ":
-            continue
-        elif cmd.split()[0] in commands:
-            base = utils.replace_all_keywords(cmd, commands)
-            os.system(f"{base}")
-        else:
-            os.system(cmd)
-    
-    curr_dir = os.path.expanduser("~")
-    os.chdir(curr_dir)
+# rc_handler.py
+curr_dir = handle_rc(curr_dir)
 
 while True:
     try:
-        cmd = session.prompt(f"{curr_dir} $$ ").strip()
-        command_history.append(cmd)
-    except KeyboardInterrupt:
+        cmd = session.prompt(f"{curr_dir} $$ ").strip() # Clean prompt
+        command_history.append(cmd) # add to command history
+    except KeyboardInterrupt: # Safe end
         r.write(str(command_history).replace("]", '').replace("[", '').replace(",", '').strip())
         r.close()
         break
-    if not cmd:
+    if not cmd: # prevent empty commands
         continue
     if cmd == "خروج" or cmd == "quit" or cmd == "exit":  # exit
         r.write(str(command_history).replace("]", '').replace("[", '').replace(",", '').strip())
         r.close()
         break
 
-
-    # Translate command keywords
-    translated_cmd = utils.replace_all_keywords(cmd, commands)
+    # utils.py
+    translated_cmd = utils.replace_all_keywords(cmd, commands) 
     base = translated_cmd.split()[0]
 
-    if base == "cd":
+    if base == "cd": # Handle directory changes safely
         parts = translated_cmd.split(maxsplit=1)
         path = parts[1] if len(parts) > 1 else os.path.expanduser("~")
 
@@ -108,4 +66,4 @@ while True:
         try:
             subprocess.run(translated_cmd, shell=True)
         except Exception as e:
-            print(e)
+            print(e) # error handling
