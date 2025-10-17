@@ -13,12 +13,12 @@ from rc_handler import handle_rc
 from colorama import init, Fore, Style
 
 # handle history and rc files
-if not os.path.exists(".tabshhistory"):
-    with open(".tabshhistory", 'w') as f:
+if not os.path.exists(os.path.expanduser("~/.config/.tabshhistory")):
+    with open(os.path.expanduser("~/.config/.tabshhistory"), 'w') as f:
         f.close()
 
 if not os.path.exists(".tabshrc"):
-    with open(".tabshhistory", 'w') as f:
+    with open(".tabshrc", 'w') as f:
         f.write("clear")
         f.close()
 
@@ -31,8 +31,15 @@ curr_dir = ""
 # handle_scripts.py
 script_handler(curr_dir, sys.argv)
 
+safe_history_file = os.path.expanduser("~/.config/.tabshhistory")
+
+try:
+    history = FileHistory(safe_history_file)
+except PermissionError:
+    from prompt_toolkit.history import InMemoryHistory
+    history = InMemoryHistory()
+
 # command history and cycling
-history = FileHistory('.tabshhistory')
 session = PromptSession(history=history)
 
 # to be written to .tabshhistory
@@ -40,7 +47,7 @@ command_history = []
 
 
 
-r = open(".tabshhistory", 'a')
+r = open(os.path.expanduser("~/.config/.tabshhistory"), 'a')
 
 # rc_handler.py
 curr_dir, alias = handle_rc(curr_dir)
@@ -53,6 +60,8 @@ while True:
         r.write(utils.format_list(command_history))
         r.close()
         break
+
+    
     if not cmd: # prevent empty commands
         continue
     if cmd == "خروج" or cmd == "quit" or cmd == "exit":  # exit
