@@ -49,7 +49,7 @@ while True:
     try:
         cmd = session.prompt(f"{curr_dir} $$ ").strip() # Clean prompt
         command_history.append(cmd) # add to command history
-    except KeyboardInterrupt: # Safe end
+    except (KeyboardInterrupt, EOFError): # Safe end
         r.write(str(command_history).replace("]", '').replace("[", '').replace(",", '').strip())
         r.close()
         break
