@@ -59,6 +59,7 @@ commands = {
     # Arch
     "باكمان": "pacman",
     "مايك-بكج": "makepkg",
+    "حزمة": "pkg", # FreeBSD
     "ياي": "yay",
     "بارو": "paru",
     # Debian
