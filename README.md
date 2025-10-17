@@ -262,7 +262,3 @@ This project is licensed under the **GNU GPL v3.0**. See the [LICENSE](LICENSE) 
 * GitHub Issues: [Submit here](https://github.com/MOHAPY24/tabsh/issues)
 * Pull Requests: Always welcome
 * Maintainer: [MOHAPY24](https://github.com/MOHAPY24)
-
----
-
-Let me know if you’d like this delivered as a `.md` file or want a shorter version for display on the GitHub repo page.
