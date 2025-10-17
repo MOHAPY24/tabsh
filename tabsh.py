@@ -43,20 +43,20 @@ command_history = []
 r = open(".tabshhistory", 'a')
 
 # rc_handler.py
-curr_dir = handle_rc(curr_dir)
+curr_dir, alias = handle_rc(curr_dir)
 
 while True:
     try:
         cmd = session.prompt(f"{curr_dir} $$ ").strip() # Clean prompt
         command_history.append(cmd) # add to command history
     except (KeyboardInterrupt, EOFError): # Safe end
-        r.write(str(command_history).replace("]", '').replace("[", '').replace(",", '').strip())
+        r.write(utils.format_list(command_history))
         r.close()
         break
     if not cmd: # prevent empty commands
         continue
     if cmd == "خروج" or cmd == "quit" or cmd == "exit":  # exit
-        r.write(str(command_history).replace("]", '').replace("[", '').replace(",", '').strip())
+        r.write(utils.format_list(command_history))
         r.close()
         break
 
