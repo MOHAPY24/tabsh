@@ -20,6 +20,8 @@ commands = {
     "اوك": "awk",
     "راس": "head",
     "ذيل": "tail",
+    "زيم": "vim",
+    "نانو": "nano",
 
     # System Information and Monitoring
     "عمل": "ps",
@@ -59,7 +61,6 @@ commands = {
     # Arch
     "باكمان": "pacman",
     "مايك-بكج": "makepkg",
-    "حزمة": "pkg", # FreeBSD
     "ياي": "yay",
     "بارو": "paru",
     # Debian
