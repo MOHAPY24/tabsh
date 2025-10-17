@@ -1,6 +1,4 @@
-Certainly! Here's the rewritten **README** for your **tabsh** project, with all script-based examples and references (like `.tabsh` scripts or `if`/`loop` blocks) removed or revised. It focuses only on command-line usage and features that are currently supported.
 
----
 
 # tabsh
 
