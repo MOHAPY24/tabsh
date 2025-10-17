@@ -12,6 +12,16 @@ from handle_scripts import script_handler
 from rc_handler import handle_rc
 from colorama import init, Fore, Style
 
+# handle history and rc files
+if not os.path.exists(".tabshhistory"):
+    with open(".tabshhistory", 'w') as f:
+        f.close()
+
+if not os.path.exists(".tabshrc"):
+    with open(".tabshhistory", 'w') as f:
+        f.write("clear")
+        f.close()
+
 init(True)
 
 # For directory tracking
@@ -27,6 +37,8 @@ session = PromptSession(history=history)
 
 # to be written to .tabshhistory
 command_history = []
+
+
 
 r = open(".tabshhistory", 'a')
 
