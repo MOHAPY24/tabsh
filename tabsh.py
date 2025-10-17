@@ -5,7 +5,7 @@ from translations import commands
 import subprocess
 import utils
 import os
-from prompt_toolkit import PromptSession
+from prompt_toolkit import PromptSession EditingMode
 from prompt_toolkit.history import FileHistory
 import sys
 from handle_scripts import script_handler
@@ -54,7 +54,7 @@ curr_dir, alias = handle_rc(curr_dir)
 
 while True:
     try:
-        cmd = session.prompt(f"\u200F{curr_dir.replace(os.path.expanduser('~'), '~', 1)} $$ ").strip() # Clean prompt  
+        cmd = session.prompt(f"{curr_dir.replace(os.path.expanduser('~'), '~', 1)} $$ ", editing_mode=EditingMode.VI).strip() # Clean prompt  
         command_history.append(cmd) # add to command history
     except (KeyboardInterrupt, EOFError): # Safe end
         r.write(utils.format_list(command_history))
