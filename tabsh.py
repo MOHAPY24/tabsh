@@ -54,7 +54,7 @@ curr_dir, alias = handle_rc(curr_dir)
 
 while True:
     try:
-        cmd = session.prompt(f"{curr_dir.replace(os.path.expanduser('~'), '~', 1)} $$ ").strip() # Clean prompt  
+        cmd = session.prompt(f"\u200F{curr_dir.replace(os.path.expanduser('~'), '~', 1)} $$ ").strip() # Clean prompt  
         command_history.append(cmd) # add to command history
     except (KeyboardInterrupt, EOFError): # Safe end
         r.write(utils.format_list(command_history))
