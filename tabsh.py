@@ -41,7 +41,7 @@ except PermissionError:
     history = InMemoryHistory()
 
 # command history and cycling
-session = PromptSession(history=history)
+session = PromptSession(history=history, editing_mode=prompt_toolkit.enums.EditingMode.VI)
 
 # to be written to .tabshhistory
 command_history = []
@@ -55,7 +55,7 @@ curr_dir, alias = handle_rc(curr_dir)
 
 while True:
     try:
-        cmd = session.prompt(f"{curr_dir.replace(os.path.expanduser('~'), '~', 1)} $$ ", editing_mode=prompt_toolkit.enums.EditingMode.VI).strip() # Clean prompt  
+        cmd = session.prompt(f"{curr_dir.replace(os.path.expanduser('~'), '~', 1)} $$ ").strip() # Clean prompt  
         command_history.append(cmd) # add to command history
     except (KeyboardInterrupt, EOFError): # Safe end
         r.write(utils.format_list(command_history))
