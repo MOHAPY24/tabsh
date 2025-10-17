@@ -82,3 +82,5 @@ while True:
             subprocess.run(translated_cmd, shell=True)
         except Exception as e:
             print(Fore.RED + e) # error handling
+
+r.close()
