@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 # 2025-10-17 16:11:02.257639
 +cp ~/translations.py translations.py
 
@@ -18,5 +17,3 @@
 # 2025-10-17 16:12:54.345295
 +git add .
 'nano' 'nvim' 'vim' 'vi'
-=======
->>>>>>> 0904db2f7b3a4ded8f195faf8b27144858193712
