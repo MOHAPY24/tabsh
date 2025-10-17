@@ -82,6 +82,8 @@ With `tabsh`, you can write basic shell commands in Arabic directly in your term
 * **`utils.py`** — Helper utilities for parsing, tokenizing, and transforming commands.
 * **`.tabshrc`** — User config file.
 * **`.tabshhistory`** — Arabic command history file.
+* **`rc-handler.py`** _ Handle .tabshrc file.
+* **`script-handler.py`** _ Handle .tabsh scripts.
 
 ### How It Works
 
