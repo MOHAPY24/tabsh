@@ -1,1 +1,87 @@
 'echo hi' 'exit''echo hi' 'echo lol' 'echo lol' 'exit'
+# 2025-10-17 11:11:17.886266
++ls
+
+# 2025-10-17 11:11:29.376609
++عدد
+
+# 2025-10-17 11:11:38.794525
++غير
+
+# 2025-10-17 11:17:31.614194
++ls
+
+# 2025-10-17 11:17:43.956938
++vim translations.py
+
+# 2025-10-17 11:18:15.041138
++nano translations.py
+
+# 2025-10-17 11:36:15.328094
++gh
+
+# 2025-10-17 11:38:36.011238
++صعد باكمان -S cowsay
+
+# 2025-10-17 11:38:47.250322
++exit
+'sdifjfipodjsfdgfg' 'mjoinoi' 'jiji' 'clear' 'mv ttabsh tabsh' 'cd tabsh' 'ls' 'عدد' 'غير' 'واضح' 'cd tabsh' 'ls' 'vim translations.py' 'nano translations.py' 'gh' 'صعد باكمان -S cowsay' 'exit'
+# 2025-10-17 11:57:56.618033
++git remote add git@github.com:/MOHAPY/tabsh.git
+
+# 2025-10-17 11:58:01.893151
++git remote add main git@github.com:/MOHAPY/tabsh.git
+
+# 2025-10-17 11:58:34.321495
++ssh keygen -t ed25519 -C "alahmedisoftware@gmail.com"
+
+# 2025-10-17 11:58:44.769660
++ssh-keygen -t ed25519 -C "alahmedisoftware@gmail.com"
+
+# 2025-10-17 11:59:11.068435
++eval "$(ssh-agent -s)"
+
+# 2025-10-17 11:59:32.540094
++ssh-add ~/.ssh/id_ed25519
+
+# 2025-10-17 11:59:38.354531
++eval "$(ssh-agent -s)"
+
+# 2025-10-17 11:59:39.491603
++ssh-add ~/.ssh/id_ed25519
+
+# 2025-10-17 12:00:09.712192
++killall ssh-agent
+
+# 2025-10-17 12:00:28.073332
++eval $(ssh-agent -s)
+
+# 2025-10-17 12:00:32.034006
++ssh-add ~/.ssh/id_ed25519
+
+# 2025-10-17 12:00:45.935006
++echo $SSH_AUTH_SOCK
+
+# 2025-10-17 12:00:54.746442
++ssh-agent bash
+
+# 2025-10-17 12:01:24.296918
++ssh-agent add ~/ssh/id_ed25519
+
+# 2025-10-17 12:01:28.776063
++cd
+
+# 2025-10-17 12:03:59.452198
++ls
+
+# 2025-10-17 12:04:07.092482
++ls -a
+
+# 2025-10-17 12:04:32.798411
++git push origin newtranslations
+
+# 2025-10-17 12:04:43.829423
++git checkout -b newtranslations
+
+# 2025-10-17 12:04:50.856226
++git add .
