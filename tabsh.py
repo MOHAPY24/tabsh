@@ -5,7 +5,7 @@ from translations import commands
 import subprocess
 import utils
 import os
-from prompt_toolkit import PromptSession EditingMode
+from prompt_toolkit import PromptSession, EditingMode
 from prompt_toolkit.history import FileHistory
 import sys
 from handle_scripts import script_handler
