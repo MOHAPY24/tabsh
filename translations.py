@@ -53,5 +53,27 @@ commands = {
     "معنى": "man",
     "صعد": "sudo",
     "فساد": "alias",
-    "واضح": "clear"
+    "واضح": "clear",
+    
+    # Package Managers and related (section added 17/10/25)
+    # Arch
+    "باكمان": "pacman",
+    "مايك-بكج": "makepkg",
+    "ياي": "yay",
+    "بارو": "paru",
+    # Debian
+    "ابت": "apt",
+    "د-بكج": "dpkg",
+    "ابت-قت": "apt-get",
+    # Fedora (the word "rpm" is shared between Fedora and openSUSE)
+    "ربم": "rpm",
+    "دنف": "dnf",
+    # openSUSE
+    "زيبر": "zyppr",
+    # Alpine
+    "ابك": "apk",
+
+    # I have no idea where Git is supposed to go so im just gonna put it
+    # here and figure it out later
+    "قيت": "git"
 }
