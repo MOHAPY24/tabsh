@@ -1,6 +1,11 @@
+#!/usr/bin/env python3
+
 import os
 import utils
 import subprocess
+from colorama import init, Fore, Style
+
+init(True)
 
 
 def handle_rc(current_dir): # handle .tabshrc
@@ -28,16 +33,16 @@ def handle_rc(current_dir): # handle .tabshrc
                     os.chdir(os.path.expanduser(path))
                     current_dir = os.getcwd()
                 except FileNotFoundError:
-                    print(f"cd: no such file or directory: {path}")
+                    print(Fore.RED + f"cd: no such file or directory: {path}")
                 except NotADirectoryError:
-                    print(f"cd: not a directory: {path}")
+                    print(Fore.RED + f"cd: not a directory: {path}")
                 except PermissionError:
-                    print(f"cd: permission denied: {path}")
+                    print(Fore.RED + f"cd: permission denied: {path}")
             else:
                 try:
                     subprocess.run(translated_cmd, shell=True)
                 except Exception as e:
-                    print(e)
+                    print(Fore.RED + e)
     
     current_dir = os.path.expanduser("~")
     os.chdir(current_dir)

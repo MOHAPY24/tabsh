@@ -1,7 +1,12 @@
+#!/usr/bin/env python3
+
 import utils
 import os
 import subprocess
 import sys
+from colorama import init, Fore, Style
+
+init(True)
 
 def script_handler(current_dir, argvs:list): # handle scripts passed as arguments
     try:
@@ -28,16 +33,16 @@ def script_handler(current_dir, argvs:list): # handle scripts passed as argument
                         os.chdir(os.path.expanduser(path))
                         current_dir = os.getcwd()
                     except FileNotFoundError:
-                        print(f"cd: no such file or directory: {path}")
+                        print(Fore.RED + f"cd: no such file or directory: {path}")
                     except NotADirectoryError:
-                        print(f"cd: not a directory: {path}")
+                        print(Fore.RED + f"cd: not a directory: {path}")
                     except PermissionError:
-                        print(f"cd: permission denied: {path}")
+                        print(Fore.RED + f"cd: permission denied: {path}")
                 else:
                     try:
                         subprocess.run(translated_cmd, shell=True)
                     except Exception as e:
-                        print(e)
+                        print(Fore.RED + e)
         quit()
 
 

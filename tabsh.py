@@ -10,6 +10,9 @@ from prompt_toolkit.history import FileHistory
 import sys
 from handle_scripts import script_handler
 from rc_handler import handle_rc
+from colorama import init, Fore, Style
+
+init(True)
 
 # For directory tracking
 global curr_dir
@@ -57,13 +60,13 @@ while True:
             os.chdir(os.path.expanduser(path))
             curr_dir = os.getcwd()
         except FileNotFoundError:
-            print(f"cd: no such file or directory: {path}")
+            print(Fore.RED + f"cd: no such file or directory: {path}")
         except NotADirectoryError:
-            print(f"cd: not a directory: {path}")
+            print(Fore.RED + f"cd: not a directory: {path}")
         except PermissionError:
-            print(f"cd: permission denied: {path}")
+            print(Fore.RED + f"cd: permission denied: {path}")
     else:
         try:
             subprocess.run(translated_cmd, shell=True)
         except Exception as e:
-            print(e) # error handling
+            print(Fore.RED + e) # error handling
