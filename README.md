@@ -9,24 +9,24 @@
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Goals & Motivation](#goals--motivation)
-3. [Features](#features)
-4. [Current Limitations & Known Issues](#current-limitations--known-issues)
-5. [Architecture & Design](#architecture--design)
-6. [Installation & Usage](#installation--usage)
+1. [Introduction](#Introduction)
+2. [Goals & Motivation](#Goals--Motivation)
+3. [Features](#Features)
+4. [Current Limitations & Known Issues](#Current-Limitations--Known-issues)
+5. [Architecture & Design](#Architecture--Design)
+6. [Installation & Usage](#Installation--Usage)
 
-   * [Prerequisites](#prerequisites)
-   * [Installation Steps](#installation-steps)
-   * [Using tabsh](#using-tabsh)
-   * [Configuration Files](#configuration-files)
-   * [Examples](#examples)
-7. [Testing](#testing)
+   * [Prerequisites](#Prerequisites)
+   * [Installation Steps](#Installation-steps)
+   * [Using tabsh](#Using-tabsh)
+   * [Configuration Files](#Configuration-files)
+   * [Examples](#Examples)
+7. [Testing](#Testing)
 8. [Contributing](#Contributing)
-9. [Roadmap & Future Work](#roadmap--future-work)
-10. [License](#license)
-11. [Acknowledgments](#acknowledgments)
-12. [Contact / Support](#contact--support)
+9. [Roadmap & Future Work](#Roadmap--Future-work)
+10. [License](#License)
+11. [Acknowledgments](#Acknowledgments)
+12. [Contact / Support](#Contact--Support)
 
 ---
 
