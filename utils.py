@@ -1,4 +1,4 @@
-# utils.py
+#!/usr/bin/env python3
 import re
 
 def replace_all_keywords(code, replacements):

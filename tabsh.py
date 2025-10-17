@@ -4,7 +4,15 @@ from translations import commands
 import subprocess
 import utils
 import os
+from prompt_toolkit import PromptSession
+from prompt_toolkit.history import FileHistory
 
+history = FileHistory('.tabshhistory')
+session = PromptSession(history=history)
+
+command_history = []
+
+r = open(".tabshhistory", 'a')
 
 with open(".tabshrc", 'r') as f:
     code = f.read()
@@ -22,12 +30,17 @@ with open(".tabshrc", 'r') as f:
 
 while True:
     try:
-        cmd = input(f"{curr_dir} $$ ").strip()
+        cmd = session.prompt(f"{curr_dir} $$ ").strip()
+        command_history.append(cmd)
     except KeyboardInterrupt:
+        r.write(str(command_history).replace("]", '').replace("[", '').replace(",", '').strip())
+        r.close()
         break
     if not cmd:
         continue
     if cmd == "خروج" or cmd == "quit" or cmd == "exit":  # exit
+        r.write(str(command_history).replace("]", '').replace("[", '').replace(",", '').strip())
+        r.close()
         break
 
 

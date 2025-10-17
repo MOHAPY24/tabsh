@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 commands = {
     # File and Directory Management
     "عدد": "ls",
