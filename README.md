@@ -22,7 +22,7 @@
    * [Configuration Files](#configuration-files)
    * [Examples](#examples)
 7. [Testing](#testing)
-8. [Contributing](#contributing)
+8. [Contributing](#Contributing)
 9. [Roadmap & Future Work](#roadmap--future-work)
 10. [License](#license)
 11. [Acknowledgments](#acknowledgments)
