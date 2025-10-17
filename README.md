@@ -236,7 +236,7 @@ You can start by checking open issues or suggesting improvements.
 | Support for `.tabshrc` (full syntax) | Planned  | Environment variables, functions, aliases |
 | Add more Arabic command mappings     | Ongoing  | Core focus                                |
 | Improve fallback behavior            | Ongoing  | Handle unsupported syntax better          |
-| Script (.tabsh) support              | Future   | Requires syntax coverage                  |
+| Script full (.tabsh) support         | Future   | Requires syntax coverage, scripts work    |
 | Conditional/loop support in Arabic   | Future   | Not yet implemented                       |
 | Plugin system for dialects           | Proposed | User-definable extensions                 |
 | CLI installer                        | Proposed | Easier setup process                      |
