@@ -59,7 +59,7 @@ With `tabsh`, you can write basic shell commands in Arabic directly in your term
 
 ---
 
-## 4. Current Limitations & Known Issues
+## 4. Current Limitations & Known Issues (IMPORTANT)
 
 ⚠️ Please note that `tabsh` is in early development, and not all shell syntax or constructs are yet supported:
 
@@ -69,6 +69,7 @@ With `tabsh`, you can write basic shell commands in Arabic directly in your term
 4. Use `tabsh` through the provided wrapper script (`tabsh.sh`) for now.
 5. Only a limited set of basic commands are translated—full language coverage is still in progress.
 6. Translating complex pipelines or redirections is not fully supported yet.
+7. No terminal is guaranteed to work best with tabsh, as most terminals have rendering issues involving Arabic/RTL text.
 
 ---
 
