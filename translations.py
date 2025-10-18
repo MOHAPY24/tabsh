@@ -20,8 +20,6 @@ commands = {
     "اوك": "awk",
     "راس": "head",
     "ذيل": "tail",
-    "زيم": "vim",
-    "نانو": "nano",
 
     # System Information and Monitoring
     "عمل": "ps",
@@ -31,6 +29,7 @@ commands = {
     "سعة-ذكره": "free",
     "معلومات": "uname",
     "تاريخ": "history",
+    "من-أنا": "whoami", # Important sometimes
 
     # Permissions and Ownership
     "ملف-إذن": "chmod",
@@ -61,6 +60,7 @@ commands = {
     # Arch
     "باكمان": "pacman",
     "مايك-بكج": "makepkg",
+    "حزمة": "pkg", # FreeBSD
     "ياي": "yay",
     "بارو": "paru",
     # Debian
@@ -74,17 +74,10 @@ commands = {
     "زيبر": "zyppr",
     # Alpine
     "ابك": "apk",
+    # Other package Managers
+    "نبم": "npm", # Required, I don't know how it's still not there lol
 
     # I have no idea where Git is supposed to go so im just gonna put it
     # here and figure it out later
-    "قيت": "git",
-
-    # Syntax of Logic (section added 17/10/25)
-    "لو": "if",
-    "ثم": "then",
-    "اخر": "else",
-    "ول": "fi",
-    "بينما": "while",
-    "صحيح": "true",
-    "خطا": "false"
+    "قيت": "git"
 }
