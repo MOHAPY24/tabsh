@@ -1,0 +1,3 @@
+*.tabsh lingust-language=Shell
+.tabshrc lingust-language=Shell
+.tabshhistory lingust-language=Shell
