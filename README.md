@@ -59,7 +59,11 @@ With `tabsh`, you can write basic shell commands in Arabic directly in your term
 
 ---
 
+<<<<<<< HEAD
 ## 4. Current Limitations & Known Issues
+=======
+## 4. Current Limitations & Known Issues (IMPORTANT)
+>>>>>>> f01abdf2fe81d1bfc785ae7494d590c880b48f38
 
 ⚠️ Please note that `tabsh` is in early development, and not all shell syntax or constructs are yet supported:
 
@@ -69,6 +73,10 @@ With `tabsh`, you can write basic shell commands in Arabic directly in your term
 4. Use `tabsh` through the provided wrapper script (`tabsh.sh`) for now.
 5. Only a limited set of basic commands are translated—full language coverage is still in progress.
 6. Translating complex pipelines or redirections is not fully supported yet.
+<<<<<<< HEAD
+=======
+7. No terminal is guaranteed to work best with tabsh, as most terminals have rendering issues involving Arabic/RTL text.
+>>>>>>> f01abdf2fe81d1bfc785ae7494d590c880b48f38
 
 ---
 
@@ -263,4 +271,8 @@ This project is licensed under the **GNU GPL v3.0**. See the [LICENSE](LICENSE) 
 
 * GitHub Issues: [Submit here](https://github.com/MOHAPY24/tabsh/issues)
 * Pull Requests: Always welcome
+<<<<<<< HEAD
 * Maintainers: [MOHAPY24](https://github.com/MOHAPY24) and [Alahmedi](https://github.com/alahmedi)
+=======
+* Maintainers: [MOHAPY24](https://github.com/MOHAPY24), [Alahmedi](https://github.com/alahmedi), [Abdo-3312](https://github.com/Abdo-3312) and [DiodeMusic](https://github.com/diodemusic)
+>>>>>>> f01abdf2fe81d1bfc785ae7494d590c880b48f38

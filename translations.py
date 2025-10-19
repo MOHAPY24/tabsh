@@ -20,8 +20,11 @@ commands = {
     "اوك": "awk",
     "راس": "head",
     "ذيل": "tail",
+<<<<<<< HEAD
     "زيم": "vim",
     "نانو": "nano",
+=======
+>>>>>>> f01abdf2fe81d1bfc785ae7494d590c880b48f38
 
     # System Information and Monitoring
     "عمل": "ps",
@@ -31,6 +34,10 @@ commands = {
     "سعة-ذكره": "free",
     "معلومات": "uname",
     "تاريخ": "history",
+<<<<<<< HEAD
+=======
+    "من-أنا": "whoami", # Important sometimes
+>>>>>>> f01abdf2fe81d1bfc785ae7494d590c880b48f38
 
     # Permissions and Ownership
     "ملف-إذن": "chmod",
@@ -61,6 +68,10 @@ commands = {
     # Arch
     "باكمان": "pacman",
     "مايك-بكج": "makepkg",
+<<<<<<< HEAD
+=======
+    "حزمة": "pkg", # FreeBSD
+>>>>>>> f01abdf2fe81d1bfc785ae7494d590c880b48f38
     "ياي": "yay",
     "بارو": "paru",
     # Debian
@@ -74,6 +85,11 @@ commands = {
     "زيبر": "zyppr",
     # Alpine
     "ابك": "apk",
+<<<<<<< HEAD
+=======
+    # Other package Managers
+    "نبم": "npm", # Required, I don't know how it's still not there lol
+>>>>>>> f01abdf2fe81d1bfc785ae7494d590c880b48f38
 
     # I have no idea where Git is supposed to go so im just gonna put it
     # here and figure it out later

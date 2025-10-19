@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 *.tabsh lingust-language=Shell
 .tabshrc lingust-language=Shell
 .tabshhistory lingust-language=Shell
+=======
+*.tabsh linguist-language=sh
+*.tabshrc linguist-language=sh
+*.tabshhistory linguist-language=sh
+>>>>>>> f01abdf2fe81d1bfc785ae7494d590c880b48f38
