@@ -264,4 +264,4 @@ This project is licensed under the **GNU GPL v3.0**. See the [LICENSE](LICENSE) 
 
 * GitHub Issues: [Submit here](https://github.com/MOHAPY24/tabsh/issues)
 * Pull Requests: Always welcome
-* Maintainers: [MOHAPY24](https://github.com/MOHAPY24) and [Alahmedi](https://github.com/alahmedi)
+* Maintainers: [MOHAPY24](https://github.com/MOHAPY24), [Alahmedi](https://github.com/alahmedi), [Abdo-3312](https://github.com/Abdo-3312) and [DiodeMusic](https://github.com/diodemusic)
