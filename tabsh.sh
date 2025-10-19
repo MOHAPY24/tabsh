@@ -7,7 +7,7 @@ prev_shell=$SHELL # Record shell before change
 if [    $(pwd) == "/bin/tabsh"  ]; then # check if the shell is in /bin/
     printf ' \n'
 else
-    echo "WARNING: Shell not in /bin" # Warn if not
+    printf "WARNING: Shell not in /bin \n" # Warn if not
     sleep 1
 fi
 
