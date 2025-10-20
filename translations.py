@@ -79,5 +79,13 @@ commands = {
 
     # I have no idea where Git is supposed to go so im just gonna put it
     # here and figure it out later
-    "قيت": "git"
+    "قيت": "git",
+    # Syntax of Logic
+    "لو": "if",
+    "ثم": "then",
+    "اخر": "else",
+    "ول": "fi",
+    "بينما": "while",
+    "صحيح": "true",
+    "خطا": "false"
 }
