@@ -60,6 +60,9 @@ commands = {
     "تحكم": "ssh",
     "شراك": "scp",
 
+    # System management
+    "نظام-تحكم": "systemctl",
+
     # Process Management
     "قف": "kill",
     "قف-اسم": "killall",
