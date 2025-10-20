@@ -57,7 +57,7 @@ With `tabsh`, you can write basic shell commands in Arabic directly in your term
 * **Fallback compatibility**: Falls back to BASH if a command isn’t translated.
 * **Cross-platform**: Works on most UNIX-based systems (Linux, macOS, WSL).
 
----
+---           
 
 ## 4. Current Limitations & Known Issues (IMPORTANT)
 

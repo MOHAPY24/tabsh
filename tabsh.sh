@@ -1,4 +1,5 @@
 #!/bin/bash 
+# tabsh script wrapper
 
 set -e # ends if error
 

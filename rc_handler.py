@@ -20,7 +20,7 @@ def handle_rc(current_dir): # handle .tabshrc
                 continue
             if cmd == "خروج" or cmd == "quit" or cmd == "exit":  # exit 
                 break
-
+   
 
             # Translate command keywords
             # utils.py
