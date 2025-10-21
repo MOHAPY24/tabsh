@@ -27,7 +27,7 @@ if [[ "$lang" == "english" ]]; then
 	elif [[ $SHELL" == "/bin/bash" ]]; then
 		rc="~/.bashrc"
 	else
-		printf "TABSHInstaller: INVALID SHELL! Exiting...\n"
+		printf "TABSHInstaller: Invalid shell! Exiting...\n"
 		exit 1
 	fi
 	printf "TABSHInstaller: Modifying $rc to automatically start TABSH\n"
