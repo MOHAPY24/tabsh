@@ -96,6 +96,8 @@ commands = {
     "ابك": "apk",
     # Other package Managers
     "نبم": "npm", # Required, I don't know how it's still not there lol
+    "برو": "brew",
+    "بيب": "pip",
 
     # I have no idea where Git is supposed to go so im just gonna put it
     # here and figure it out later
