@@ -1,0 +1,29 @@
+21/10/25
+Doc written by kma
+
+This doc serves as a guide to translating English commands to Arabic, and writing
+them down.
+
+## General info
+
+Translations are written in the "translations.py" in tabsh/. They are written in
+a Python dictionary, and as key:value pairs.  Translations are formatted as so:
+
+commands = {
+	"<arabic translation 1>": "<original english command 1>",
+	"<arabic translation 2>": "<original english command 2>" <-- Note how there is no comma in the
+}                                                                    last entry.
+
+## Tips
+
+1. Arabic is a lingustically painful language to mix two words the same
+   way English does for these commands. If you need to translate a command
+   like "hyperctl" for example, don't hesitate to add a dash between the two
+   words in Arabic (the prefix "هايبر" and the suffix "تحكم", making "هايبر-تحكم").
+
+2. It's fine if you want to translate a command verbosely, but please don't overdo it.
+   TABSH is meant to be a way for Arabic beginners to experience Bash in a user
+   friendly way, so if you don't capture the meaning of a command in one word, you can
+   extend it to 2-3 words. But do NOT make it a chore to type in a single command, as
+   most Arabic people (even I lol) feel like it is tiring to type in large amounts of
+   text.

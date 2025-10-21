@@ -1,0 +1,7 @@
+21/10/25
+Doc written by kma
+
+TODO:
+1. Write more in Docs/Translation/guide.txt
+2. Translate more general commands
+3. Bug test new features
