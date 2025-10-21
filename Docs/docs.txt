@@ -1,0 +1,6 @@
+21/10/2025
+Doc written by kma
+
+This folder is meant to showcase research/improvements documents about TABSH. If you have encountered issues and/or made improvements,
+it's recommended to write a .txt about it. This folder can also function as a holder for your TODOs and reminders. Feel free to create
+your own folder with your name, within the Contributors folder!
