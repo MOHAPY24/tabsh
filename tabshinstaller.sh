@@ -24,7 +24,7 @@ if [[ "$lang" == "english" ]]; then
 	chmod +x ~/tabsh/tabsh.sh &&
 	if [[ "$SHELL" == "/bin/zsh" ]]; then
 		rc="~/.zshrc"
-	elif [[ $SHELL" == "/bin/bash" ]]; then
+	elif [[ "$SHELL" == "/bin/bash" ]]; then
 		rc="~/.bashrc"
 	else
 		printf "TABSHInstaller: Invalid shell! Exiting...\n"
