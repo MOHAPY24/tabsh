@@ -1,1 +1,3 @@
-*.tabsh text eol=lf
+*.tabsh linguist-language=sh
+*.tabshrc linguist-language=sh
+*.tabshhistory linguist-language=sh

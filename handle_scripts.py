@@ -5,6 +5,7 @@ import os
 import subprocess
 import sys
 from colorama import init, Fore, Style
+from translations import commands
 
 init(True)
 

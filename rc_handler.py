@@ -4,21 +4,23 @@ import os
 import utils
 import subprocess
 from colorama import init, Fore, Style
-
+from translations import commands
 init(True)
 
 
 def handle_rc(current_dir): # handle .tabshrc
     # TODO: make .tabshrc work in a .config folder
+    # TODO: get aliases to work
     script = ".tabshrc" # get rc file
     with open(script, 'r') as f:
+        aliases = []
         scode = f.read().strip() # get rc contents without trailing newlines/whitespaces
         for cmd in scode.splitlines(): # for each line
             if not cmd:
                 continue
             if cmd == "خروج" or cmd == "quit" or cmd == "exit":  # exit 
                 break
-
+   
 
             # Translate command keywords
             # utils.py
@@ -46,4 +48,4 @@ def handle_rc(current_dir): # handle .tabshrc
     
     current_dir = os.path.expanduser("~")
     os.chdir(current_dir)
-    return current_dir
+    return current_dir, aliases

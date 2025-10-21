@@ -6,6 +6,7 @@ import subprocess
 import utils
 import os
 from prompt_toolkit import PromptSession
+import prompt_toolkit
 from prompt_toolkit.history import FileHistory
 import sys
 from handle_scripts import script_handler
@@ -13,12 +14,12 @@ from rc_handler import handle_rc
 from colorama import init, Fore, Style
 
 # handle history and rc files
-if not os.path.exists(".tabshhistory"):
-    with open(".tabshhistory", 'w') as f:
+if not os.path.exists(os.path.expanduser("~/.config/.tabshhistory")):
+    with open(os.path.expanduser("~/.config/.tabshhistory"), 'w') as f:
         f.close()
 
 if not os.path.exists(".tabshrc"):
-    with open(".tabshhistory", 'w') as f:
+    with open(".tabshrc", 'w') as f:
         f.write("clear")
         f.close()
 
@@ -31,32 +32,39 @@ curr_dir = ""
 # handle_scripts.py
 script_handler(curr_dir, sys.argv)
 
+safe_history_file = os.path.expanduser("~/.config/.tabshhistory")
+
+try:
+    history = FileHistory(safe_history_file)
+except PermissionError:
+    from prompt_toolkit.history import InMemoryHistory
+    history = InMemoryHistory()
+
 # command history and cycling
-history = FileHistory('.tabshhistory')
-session = PromptSession(history=history)
+session = PromptSession(history=history, editing_mode=prompt_toolkit.enums.EditingMode.VI)
 
 # to be written to .tabshhistory
 command_history = []
 
 
 
-r = open(".tabshhistory", 'a')
+r = open(os.path.expanduser("~/.config/.tabshhistory"), 'a')
 
 # rc_handler.py
-curr_dir = handle_rc(curr_dir)
+curr_dir, alias = handle_rc(curr_dir)
 
 while True:
     try:
-        cmd = session.prompt(f"{curr_dir} $$ ").strip() # Clean prompt
+        cmd = session.prompt(f"{curr_dir.replace(os.path.expanduser('~'), '~', 1)} $$ ").strip() # Clean prompt  
         command_history.append(cmd) # add to command history
-    except KeyboardInterrupt: # Safe end
-        r.write(str(command_history).replace("]", '').replace("[", '').replace(",", '').strip())
-        r.close()
-        break
+    except (KeyboardInterrupt, EOFError): # Safe end
+        continue # now to exit only use 'exit'
+
+    
     if not cmd: # prevent empty commands
         continue
     if cmd == "خروج" or cmd == "quit" or cmd == "exit":  # exit
-        r.write(str(command_history).replace("]", '').replace("[", '').replace(",", '').strip())
+        r.write(utils.format_list(command_history))
         r.close()
         break
 
@@ -82,3 +90,5 @@ while True:
             subprocess.run(translated_cmd, shell=True)
         except Exception as e:
             print(Fore.RED + e) # error handling
+
+r.close()

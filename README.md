@@ -57,9 +57,9 @@ With `tabsh`, you can write basic shell commands in Arabic directly in your term
 * **Fallback compatibility**: Falls back to BASH if a command isn’t translated.
 * **Cross-platform**: Works on most UNIX-based systems (Linux, macOS, WSL).
 
----
+---           
 
-## 4. Current Limitations & Known Issues
+## 4. Current Limitations & Known Issues (IMPORTANT)
 
 ⚠️ Please note that `tabsh` is in early development, and not all shell syntax or constructs are yet supported:
 
@@ -69,6 +69,7 @@ With `tabsh`, you can write basic shell commands in Arabic directly in your term
 4. Use `tabsh` through the provided wrapper script (`tabsh.sh`) for now.
 5. Only a limited set of basic commands are translated—full language coverage is still in progress.
 6. Translating complex pipelines or redirections is not fully supported yet.
+7. No terminal is guaranteed to work best with tabsh, as most terminals have rendering issues involving Arabic/RTL text.
 
 ---
 
@@ -82,6 +83,8 @@ With `tabsh`, you can write basic shell commands in Arabic directly in your term
 * **`utils.py`** — Helper utilities for parsing, tokenizing, and transforming commands.
 * **`.tabshrc`** — User config file.
 * **`.tabshhistory`** — Arabic command history file.
+* **`rc-handler.py`** _ Handle .tabshrc file.
+* **`script-handler.py`** _ Handle .tabsh scripts.
 
 ### How It Works
 
@@ -261,4 +264,4 @@ This project is licensed under the **GNU GPL v3.0**. See the [LICENSE](LICENSE) 
 
 * GitHub Issues: [Submit here](https://github.com/MOHAPY24/tabsh/issues)
 * Pull Requests: Always welcome
-* Maintainers: [MOHAPY24](https://github.com/MOHAPY24) and [Alahmedi](https://github.com/alahmedi)
+* Maintainers: [MOHAPY24](https://github.com/MOHAPY24), [Alahmedi](https://github.com/alahmedi), [Abdo-3312](https://github.com/Abdo-3312) and [DiodeMusic](https://github.com/diodemusic)
