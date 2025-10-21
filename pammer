@@ -1,7 +1,0 @@
-#!/bin/bash
-
-cont=$(curl $1)
-
-while true; do
-	curl -X POST -d "$cont" $1
-done
