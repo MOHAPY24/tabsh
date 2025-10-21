@@ -1,0 +1,4 @@
+21/10/25
+Doc written by kma
+
+This folder is for Arabic translation contributors.
