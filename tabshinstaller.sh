@@ -17,7 +17,7 @@ read -p "(english/عربي): " lang
 
 if [[ "$lang" == "english" ]]; then
 	printf "TABSHInstaller: Pip that shit!\n"
-	pip install colorama prompt-toolkit &&
+	pip3 install colorama prompt-toolkit &&
 	printf "TABSHInstaller: Downloading TABSH from Testicles GitHub\n"
 	git clone https://github.com/MOHAPY24/tabsh.git &&
 	printf "TABSHInstaller: Making shell executable\n"
@@ -35,7 +35,7 @@ if [[ "$lang" == "english" ]]; then
 	printf "Successfully installed!"
 elif [[ "$lang" == "عربي" ]]; then
         printf "TABSHInstaller: تثبيت التبعيات\n"
-        pip install colorama prompt-toolkit &&
+        pip3 install colorama prompt-toolkit &&
         printf "TABSHInstaller: تنزيل طبش\n"   
         git clone https://github.com/MOHAPY24/tabsh.git &&
         printf "TABSHInstaller: جعل الصدفة قابلاً للتنفيذ\n"
