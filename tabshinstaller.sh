@@ -3,22 +3,37 @@
 # Made by kma 21/10/2025.
 # This script was thankfully sponsored by Jeffery Epstein's third ex-wife!
 
+if command -v python3 >/dev/null 2>&1; then
+  version=$(python3 -V 2>&1 | awk '{print $2}')
+  printf "TABSHInstaller: Python3 version $version detected.\n"
+  if command -v pip3 >/dev/null 2>&1; then
+    pipver=$(pip3 -V 2>&1 | awk '{print $2}')
+    printf "TABSHInstaller: Pip3 version $pipver detected.\n"
+  else
+    printf "TABSHInstaller: Pip3 is NOT installed! Please install Pip3 and try again.\n"
+    exit 1
+  fi
+else
+    printf "TABSHInstaller: Python3 is NOT installed! Please install Python3 and try again.\n"
+    exit 1
+fi
+
 printf "\n"
 printf "|-----------------------------------|\n"
 printf "|  Welcome to the TABSH installer!  |\n"
 printf "|  !مرحبًا بك في برنامج التثبيت طبش  |\n"
 printf "|-----------------------------------|\n"
-printf "        Beta version 0.1\n"
+printf "        Beta version 0.2\n"
 printf "\n"
 
 printf "TABSHInstaller: What language would you like to continue in?\n"
-printf "TASHInstaller: ما هي اللغة التي ترغب في الاستمرار بها؟\n"
-read -p "(english/عربي): " lang
+printf "TABSHInstaller: ما هي اللغة التي ترغب في الاستمرار بها؟\n"
+read -p '(english/عربي): ' lang
 
 if [[ "$lang" == "english" ]]; then
-	printf "TABSHInstaller: Pip that shit!\n"
+	printf "TABSHInstaller: Installing Pip\n"
 	pip3 install colorama prompt-toolkit &&
-	printf "TABSHInstaller: Downloading TABSH from Testicles GitHub\n"
+	printf "TABSHInstaller: Downloading TABSH\n"
 	git clone https://github.com/MOHAPY24/tabsh.git &&
 	printf "TABSHInstaller: Making shell executable\n"
 	chmod +x ~/tabsh/tabsh.sh &&
