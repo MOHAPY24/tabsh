@@ -23,15 +23,15 @@ if [[ "$lang" == "english" ]]; then
 	printf "TABSHInstaller: Making shell executable\n"
 	chmod +x ~/tabsh/tabsh.sh &&
 	if [[ "$SHELL" == "/bin/zsh" ]]; then
-		rc="~/.zshrc"
+		rc="$HOME/.zshrc"
 	elif [[ "$SHELL" == "/bin/bash" ]]; then
-		rc="~/.bashrc"
+		rc="$HOME/.bashrc"
 	else
 		printf "TABSHInstaller: Invalid shell! Exiting...\n"
 		exit 1
 	fi
 	printf "TABSHInstaller: Modifying $rc to automatically start TABSH\n"
-	echo "source ~/tabsh/tabsh.sh\n" >> $rc &&
+	printf "source ~/tabsh/tabsh.sh\n" >> $rc &&
 	printf "Successfully installed!"
 elif [[ "$lang" == "عربي" ]]; then
         printf "TABSHInstaller: تثبيت التبعيات\n"
@@ -41,14 +41,14 @@ elif [[ "$lang" == "عربي" ]]; then
         printf "TABSHInstaller: جعل الصدفة قابلاً للتنفيذ\n"
         chmod +x ~/tabsh/tabsh.sh &&
         if [[ "$SHELL" == "/bin/zsh" ]]; then
-                rc="~/.zshrc"
+                rc="$HOME/.zshrc"
         elif [[ "$SHELL" == "/bin/bash" ]]; then  
-                rc="~/.bashrc"
+                rc="$HOME/.bashrc"
         else    
                 printf "TABSHInstaller: ... صدفة غير صالح! جاري الخروج\n"
                 exit 1
         fi
-	echo "source ~/tabsh/tabsh.sh\n" >> $rc &&
+	printf "source ~/tabsh/tabsh.sh\n" >> "$rc" &&
         printf "Successfully installed!\n"
 else
 	printf "TABSHInstaller: invalid option\n"
