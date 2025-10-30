@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Made by kma 21/10/2025.
-# This script was thankfully sponsored by Jeffery Epstein's third ex-wife!
+# This script is 100% gluten free. Probably.
 
 if command -v python3 >/dev/null 2>&1; then
   version=$(python3 -V 2>&1 | awk '{print $2}')
@@ -18,12 +18,21 @@ else
     exit 1
 fi
 
+if [[ "$SHELL" == "/bin/zsh" ]]; then
+	rc="$HOME/.zshrc"
+elif [[ "$SHELL" == "/bin/bash" ]]; then
+	rc="$HOME/.bashrc"
+else
+	printf "TABSHInstaller: This shell is NOT supported! Use Bash or ZSh and try again.\n"
+	exit 1
+fi
+
 printf "\n"
 printf "|-----------------------------------|\n"
 printf "|  Welcome to the TABSH installer!  |\n"
 printf "|  !مرحبًا بك في برنامج التثبيت طبش  |\n"
 printf "|-----------------------------------|\n"
-printf "        Beta version 0.2\n"
+printf "        Beta version 0.3\n"
 printf "\n"
 
 printf "TABSHInstaller: What language would you like to continue in?\n"
@@ -31,40 +40,26 @@ printf "TABSHInstaller: ما هي اللغة التي ترغب في الاستم
 read -p '(english/عربي): ' lang
 
 if [[ "$lang" == "english" ]]; then
-	printf "TABSHInstaller: Installing Pip\n"
+	printf "TABSHInstaller: Installing dependencies from Pip\n"
 	pip3 install colorama prompt-toolkit &&
-	printf "TABSHInstaller: Downloading TABSH\n"
-	git clone https://github.com/MOHAPY24/tabsh.git &&
-	printf "TABSHInstaller: Making shell executable\n"
-	chmod +x ~/tabsh/tabsh.sh &&
-	if [[ "$SHELL" == "/bin/zsh" ]]; then
-		rc="$HOME/.zshrc"
-	elif [[ "$SHELL" == "/bin/bash" ]]; then
-		rc="$HOME/.bashrc"
-	else
-		printf "TABSHInstaller: Invalid shell! Exiting...\n"
-		exit 1
-	fi
-	printf "TABSHInstaller: Modifying $rc to automatically start TABSH\n"
-	printf "source ~/tabsh/tabsh.sh\n" >> $rc &&
-	printf "Successfully installed!"
+	printf "TABSHInstaller: Downloading TABSH\n" && 
+	sudo git clone https://github.com/MOHAPY24/tabsh.git /usr/local/bin/tabsh &&
+	printf "TABSHInstaller: Making shell executable\n" &&
+	chmod +x /usr/local/bin/tabsh/tabsh.sh &&
+	printf "TABSHInstaller: Modifying $rc to automatically start TABSH\n" &&
+	printf "cd /usr/local/bin/tabsh && ./tabsh.sh" >> $rc &&
+	printf "Successfully installed! Starting...\n"
+	source $rc
 elif [[ "$lang" == "عربي" ]]; then
-        printf "TABSHInstaller: تثبيت التبعيات\n"
+        printf "TABSHInstaller: تثبيت التبعيات\n" &&
         pip3 install colorama prompt-toolkit &&
-        printf "TABSHInstaller: تنزيل طبش\n"   
-        git clone https://github.com/MOHAPY24/tabsh.git &&
-        printf "TABSHInstaller: جعل الصدفة قابلاً للتنفيذ\n"
+        printf "TABSHInstaller: تنزيل طبش\n" &&
+        git clone https://github.com/MOHAPY24/tabsh.git /usr/local/bin &&
+        printf "TABSHInstaller: جعل الصدفة قابلاً للتنفيذ\n" &&
         chmod +x ~/tabsh/tabsh.sh &&
-        if [[ "$SHELL" == "/bin/zsh" ]]; then
-                rc="$HOME/.zshrc"
-        elif [[ "$SHELL" == "/bin/bash" ]]; then  
-                rc="$HOME/.bashrc"
-        else    
-                printf "TABSHInstaller: ... صدفة غير صالح! جاري الخروج\n"
-                exit 1
-        fi
-	printf "source ~/tabsh/tabsh.sh\n" >> "$rc" &&
-        printf "Successfully installed!\n"
+	echo "cd /usr/local/bin/tabsh && ./tabsh.sh" >> "$rc" &&
+        printf "Successfully installed! Starting...\n"
+	source $rc
 else
 	printf "TABSHInstaller: invalid option\n"
 fi
