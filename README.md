@@ -70,6 +70,7 @@ With `tabsh`, you can write basic shell commands in Arabic directly in your term
 5. Only a limited set of basic commands are translated—full language coverage is still in progress.
 6. Translating complex pipelines or redirections is not fully supported yet.
 7. No terminal is guaranteed to work best with tabsh, as most terminals have rendering issues involving Arabic/RTL text.
+8. Updates may be slow-coming due to the small community and lack of free time the devs have.
 
 ---
 
