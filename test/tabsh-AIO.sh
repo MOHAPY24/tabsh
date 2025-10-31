@@ -205,4 +205,4 @@ r.close()
 PYTHON
 
 # gonna work on this more later but its not a very high priority
-# momo if you can pls fix some of this stuff
+# momo if you can pls fix some of this stuff, fix it yourself and push it to experimental holy :()
