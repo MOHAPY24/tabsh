@@ -42,7 +42,7 @@ read -p '(english/عربي): ' lang
 if [[ "$lang" == "english" ]]; then
 	printf "TABSHInstaller: Installing dependencies from Pip\n"
 	pip3 install colorama prompt-toolkit &&
-	printf "TABSHInstaller: Downloading TABSH\n" && 
+	printf "TABSHInstaller: Downloading TABSH\n" &&
 	sudo git clone https://github.com/MOHAPY24/tabsh.git /usr/local/bin/tabsh &&
 	printf "TABSHInstaller: Making shell executable\n" &&
 	chmod +x /usr/local/bin/tabsh/tabsh.sh &&

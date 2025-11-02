@@ -18,9 +18,8 @@ def handle_rc(current_dir): # handle .tabshrc
         for cmd in scode.splitlines(): # for each line
             if not cmd:
                 continue
-            if cmd == "خروج" or cmd == "quit" or cmd == "exit":  # exit 
+            if cmd == "خروج" or cmd == "quit" or cmd == "exit":  # exit
                 break
-   
 
             # Translate command keywords
             # utils.py
@@ -45,7 +44,6 @@ def handle_rc(current_dir): # handle .tabshrc
                     subprocess.run(translated_cmd, shell=True)
                 except Exception as e:
                     print(Fore.RED + e)
-    
     current_dir = os.path.expanduser("~")
     os.chdir(current_dir)
     return current_dir, aliases

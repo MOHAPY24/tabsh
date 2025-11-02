@@ -2,11 +2,10 @@
 commands = {
 
     # Helpful reminders for all translation contributors:
-    
     # 1. Arabic is a lingustically painful language to mix two words the same
-    #    way English does for these commands. If you need to translate a command 
+    #    way English does for these commands. If you need to translate a command
     #    like "hyperctl" for example, don't hesitate to add a dash between the two
-    #    words in Arabic (the prefix "هايبر" and the suffix "تحكم", making "هايبر-تحكم"). 
+    #    words in Arabic (the prefix "هايبر" and the suffix "تحكم", making "هايبر-تحكم").
 
     # 2. It's fine if you want to translate a command verbosely, but please don't overdo it.
     #    TABSH is meant to be a way for Arabic beginners to experience Bash in a user

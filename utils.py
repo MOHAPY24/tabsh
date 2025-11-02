@@ -18,4 +18,4 @@ def format_list(li: list):
             return s[1:-1]
         return s
 
-    return ' '.join(strip_outer_quotes(item) for item in li) 
+    return ' '.join(strip_outer_quotes(item) for item in li)
