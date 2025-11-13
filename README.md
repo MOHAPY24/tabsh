@@ -243,7 +243,7 @@ You can start by checking open issues or suggesting improvements.
 | Script full (.tabsh) support         | Future   | Requires syntax coverage, scripts work    |
 | Conditional/loop support in Arabic   | Future   | Not yet implemented                       |
 | Plugin system for dialects           | Proposed | User-definable extensions                 |
-| CLI installer                        | Proposed | Easier setup process                      |
+| CLI installer                        | Being completed | Easier setup process                      |
 
 ---
 
