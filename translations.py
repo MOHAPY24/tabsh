@@ -29,6 +29,7 @@ commands = {
     "اقره": "cat",
     "لس": "less",
     "مور": "more",
+    "تصفح": "tree", # Project hasnt been active for weeks, got the contribution up a little
 
     # Text Processing
     "يجد": "grep",
